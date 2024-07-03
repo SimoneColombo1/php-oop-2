@@ -1,35 +1,52 @@
 <?php
-
-
-class prodotti
+class prodotto
 {
-    private $cibo;
-    private $accessori;
-    private $giochi;
 
-    public function __construct($cibo, $accessori, $giochi)
+    private $categoria;
+
+    public function __construct($categoria)
     {
 
-
-        $this->cibo = $cibo;
-        $this->accessori = $accessori;
-        $this->giochi = $giochi;
+        $this->categoria = $categoria;
     }
 }
 
-class categorie extends prodotti
-{
-    private $cane;
-    private $uccelli;
-    private $gatto;
-    private $pesci;
 
-    public function __construct($cibo, $accessori, $giochi, $cane, $uccelli, $gatto, $pesci)
+class cibo extends prodotto
+{
+
+
+
+
+    public function __construct($categoria)
     {
-        parent::__construct($cibo, $accessori, $giochi);
-        $this->cane = $cane;
-        $this->cane = $uccelli;
-        $this->cane = $gatto;
-        $this->cane = $pesci;
+        parent::__construct($categoria);
     }
 }
+class gioco extends prodotto
+{
+
+
+
+
+    public function __construct($categoria)
+    {
+        parent::__construct($categoria);
+    }
+}
+
+class accessorio extends prodotto
+{
+
+
+    public function __construct($categoria)
+    {
+        parent::__construct($categoria);
+    }
+}
+
+$cani = new prodotto("cani");
+
+$pesci = new prodotto('Pesci');
+$gatti = new prodotto('gatti');
+$uccelli = new prodotto('uccelli');
