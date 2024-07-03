@@ -77,20 +77,20 @@ $gatti = new prodotto('gatti');
 $uccelli = new prodotto('uccelli');
 
 
-$royal = new cibo('Royal Canin Mini Adult', 'https://arcaplanet.vtexassets.com/arquivos/ids/300306/Royal-Canin-Mini-Adult-Alimento-Completo-per-Cani-Adulti-di-Piccola-Taglia-10120604-1.jpg', $cani, '43,99$', '545g', 'prosciutto,riso');
+$royal = new cibo('Royal Canin Mini Adult', 'https://arcaplanet.vtexassets.com/arquivos/ids/300306/Royal-Canin-Mini-Adult-Alimento-Completo-per-Cani-Adulti-di-Piccola-Taglia-10120604-1.jpg', $cani->categoria, '43,99$', '545g', 'prosciutto,riso');
 
 
-$almocani = new cibo('Almo Nature Holistic Maintenance Medium Large Tonno e Riso', 'https://arcaplanet.vtexassets.com/arquivos/ids/300514/Almo-Nature-Holistic-Maintenance-Medium-Large-Tonno-e-Riso-10118806.jpg', $cani, '44,99$', '600g', 'manzo cereali');
-$almogatti = new cibo('Almo Nature Cat Daily Lattina', 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', $gatti, '34,99$', '400g', 'tonno, pollo, prosciutto');
+$almocani = new cibo('Almo Nature Holistic Maintenance Medium Large Tonno e Riso', 'https://arcaplanet.vtexassets.com/arquivos/ids/300514/Almo-Nature-Holistic-Maintenance-Medium-Large-Tonno-e-Riso-10118806.jpg', $cani->categoria, '44,99$', '600g', 'manzo cereali');
+$almogatti = new cibo('Almo Nature Cat Daily Lattina', 'https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg', $gatti->categoria, '34,99$', '400g', 'tonno, pollo, prosciutto');
 
-$guppipesci = new cibo('Mangime per Pesci Guppy in Fiocchi', 'https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg', $pesci, '2,95$', '30g', 'Pesci e sottoprodotti dei pesci, cereali, alghe,lieviti');
+$guppipesci = new cibo('Mangime per Pesci Guppy in Fiocchi', 'https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg', $pesci->categoria, '2,95$', '30g', 'Pesci e sottoprodotti dei pesci, cereali, alghe,lieviti');
 
-$volierawilma = new accessorio('Voliera Wilma in Legno', 'https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg', $uccelli, '184,99$', 'legno', 'M: L 83 x P 67 x H153cm');
+$volierawilma = new accessorio('Voliera Wilma in Legno', 'https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg', $uccelli->categoria, '184,99$', 'legno', 'M: L 83 x P 67 x H153cm');
 
-$cartucceEasy = new accessorio('Cartucce Filtranti per Filtro EasyCrystal', 'https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', $pesci, '2,99$', 'materiale espanso', 'N/D');
+$cartucceEasy = new accessorio('Cartucce Filtranti per Filtro EasyCrystal', 'https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg', $pesci->categoria, '2,99$', 'materiale espanso', 'N/D');
 
-$kong = new gioco('Kong Classic', 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', $cani, '13,49$', 'galleggia e rimbalza', '8,5cm x 10xm');
-$topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', $gatti, '4,99$', 'Morbido con codina in corda', '8,5cm x 10cm');
+$kong = new gioco('Kong Classic', 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', $cani->categoria, '13,49$', 'galleggia e rimbalza', '8,5cm x 10xm');
+$topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', $gatti->categoria, '4,99$', 'Morbido con codina in corda', '8,5cm x 10cm');
 
 
 
@@ -105,6 +105,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Boolshop</title>
 
 
@@ -114,6 +115,8 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
     <header>
         <h1>Boolshop</h1>
     </header>
+
+
     <main>
         <section class="card-container">
             <div class="single-card">
@@ -128,7 +131,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
 
                     </h3>
                 </span>
-                <span> <?php echo $royal->categoria; ?></span>
+                <span><i class="fa-solid fa-dog"></i> <?php echo $royal->categoria; ?></span>
                 <span> Prezzo: <?php echo $royal->prezzo;  ?></span>
                 <span>Peso netto: <?php echo $royal->peso; ?> </span>
                 <span>ingredienti:<?php echo $royal->ingredienti; ?> </span>
@@ -145,7 +148,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
                     echo $almocani->titolo;
                     ?>
                 </h3>
-                <span> <?php echo $almocani->categoria; ?></span>
+                <span><i class="fa-solid fa-dog"></i> <?php echo $almocani->categoria; ?></span>
                 <span> Prezzo: <?php echo $almocani->prezzo; ?></span>
                 <span>Peso netto: <?php echo $almocani->peso; ?> </span>
                 <span>ingredienti:<?php echo $almocani->ingredienti; ?> </span>
@@ -162,7 +165,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
                     echo $almogatti->titolo;
                     ?>
                 </h3>
-                <span> <?php echo $almogatti->categoria; ?></span>
+                <span><i class="fa-solid fa-cat"></i> <?php echo $almogatti->categoria; ?></span>
                 <span> Prezzo: <?php echo $almogatti->prezzo;  ?></span>
                 <span>Peso netto: <?php echo $almogatti->peso; ?> </span>
                 <span>ingredienti:<?php echo $almogatti->ingredienti; ?> </span>
@@ -181,7 +184,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
                     echo $guppipesci->titolo;
                     ?>
                 </h3>
-                <span> <?php echo $guppipesci->categoria; ?></span>
+                <span> <i class="fa-solid fa-fish"></i><?php echo $guppipesci->categoria; ?></span>
                 <span> Prezzo: <?php echo $guppipesci->prezzo;  ?></span>
                 <span>Peso netto: <?php echo $guppipesci->peso; ?> </span>
                 <span>ingredienti:<?php echo $guppipesci->ingredienti; ?> </span>
@@ -201,7 +204,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
                     echo $volierawilma->titolo;
                     ?>
                 </h3>
-                <span> <?php echo $guppipesci->categoria; ?></span>
+                <span><i class="fa-solid fa-kiwi-bird"></i> <?php echo $volierawilma->categoria; ?></span>
                 <span> Prezzo: <?php echo $volierawilma->prezzo;  ?></span>
                 <span>Peso netto: <?php echo $volierawilma->materiale; ?> </span>
                 <span>ingredienti:<?php echo $volierawilma->dimensioni; ?> </span>
@@ -219,7 +222,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
                     echo $cartucceEasy->titolo;
                     ?>
                 </h3>
-                <span> <?php echo $cartucceEasy->categoria; ?></span>
+                <span> <i class="fa-solid fa-fish"></i><?php echo $cartucceEasy->categoria; ?></span>
                 <span> Prezzo: <?php echo $cartucceEasy->prezzo;  ?></span>
                 <span>Peso netto: <?php echo $cartucceEasy->materiale; ?> </span>
                 <span>ingredienti:<?php echo $cartucceEasy->dimensioni; ?> </span>
@@ -228,25 +231,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
 
 
             </div>
-            <div class="single-card">
 
-
-                <span>
-                    <img src="<?php echo $volierawilma->image; ?>">
-
-                </span>
-                <h3>
-
-                    <?php
-                    echo $volierawilma->titolo;
-                    ?>
-                </h3>
-                <span> <?php echo $guppipesci->categoria; ?></span>
-                <span> Prezzo: <?php echo $volierawilma->prezzo;  ?></span>
-                <span>Peso netto: <?php echo $volierawilma->materiale; ?> </span>
-                <span>ingredienti:<?php echo $volierawilma->dimensioni; ?> </span>
-
-            </div>
             <div class="single-card">
 
                 <span>
@@ -259,7 +244,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
                     echo $kong->titolo;
                     ?>
                 </h3>
-                <span> <?php echo $kong->categoria; ?></span>
+                <span><i class="fa-solid fa-dog"></i> <?php echo $kong->categoria; ?></span>
                 <span> Prezzo: <?php echo $kong->prezzo;  ?></span>
                 <span>Peso netto: <?php echo $kong->caratteristiche; ?> </span>
                 <span>ingredienti:<?php echo $kong->dimensioni; ?> </span>
@@ -281,7 +266,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
                     echo $topinitixie->titolo;
                     ?>
                 </h3>
-                <span> <?php echo $topinitixie->categoria; ?></span>
+                <span><i class="fa-solid fa-cat"></i> <?php echo $topinitixie->categoria; ?></span>
                 <span> Prezzo: <?php echo $topinitixie->prezzo;  ?></span>
                 <span>Peso netto: <?php echo $topinitixie->caratteristiche; ?> </span>
                 <span>ingredienti:<?php echo $topinitixie->dimensioni; ?> </span>
@@ -289,9 +274,7 @@ $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexass
 
             </div>
         </section>
-
     </main>
-
 
 
 </body>
