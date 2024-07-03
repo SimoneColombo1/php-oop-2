@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin-left: 10rem
+}
+
+header {
+    padding-bottom: 5rem;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    flex-wrap: wrap;
+
+
+
+}
+
+.single-card img {
+    display: flex;
+    width: 20rem;
+    margin-left: 3rem;
+    height: 20rem;
+}
+
+
+.single-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25rem;
+    height: 25rem;
+    border: solid 1px grey;
+
+}
+
+.single-card span h3 {
+    margin-left: 6rem;
+
+}

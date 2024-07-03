@@ -2,7 +2,7 @@
 class prodotto
 {
 
-    private $categoria;
+    public $categoria;
 
     public function __construct($categoria)
     {
@@ -16,11 +16,11 @@ class cibo extends prodotto
 {
 
 
-    private $prezzo;
-    private $peso;
-    private $ingredienti;
-    private $image;
-    private $titolo;
+    public $prezzo;
+    public $peso;
+    public $ingredienti;
+    public $image;
+    public $titolo;
 
     public function __construct($titolo, $image, $categoria, $prezzo, $peso, $ingredienti)
     {
@@ -34,11 +34,11 @@ class cibo extends prodotto
 }
 class gioco extends prodotto
 {
-    private $prezzo;
-    private $caratteristiche;
-    private $dimensioni;
-    private $image;
-    private $titolo;
+    public $prezzo;
+    public $caratteristiche;
+    public $dimensioni;
+    public $image;
+    public $titolo;
 
     public function __construct($titolo, $image, $categoria, $prezzo, $caratteristiche, $dimensioni)
     {
@@ -54,11 +54,11 @@ class gioco extends prodotto
 
 class accessorio extends prodotto
 {
-    private $prezzo;
-    private $materiale;
-    private $dimensioni;
-    private $image;
-    private $titolo;
+    public $prezzo;
+    public $materiale;
+    public $dimensioni;
+    public $image;
+    public $titolo;
     public function __construct($titolo, $image, $categoria, $prezzo, $materiale, $dimensioni)
     {
         parent::__construct($categoria);
@@ -91,3 +91,209 @@ $cartucceEasy = new accessorio('Cartucce Filtranti per Filtro EasyCrystal', 'htt
 
 $kong = new gioco('Kong Classic', 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', $cani, '13,49$', 'galleggia e rimbalza', '8,5cm x 10xm');
 $topinitixie = new gioco('Topini di peluche Trixie', 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', $gatti, '4,99$', 'Morbido con codina in corda', '8,5cm x 10cm');
+
+
+
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Boolshop</title>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Boolshop</h1>
+    </header>
+    <main>
+        <section class="card-container">
+            <div class="single-card">
+                <span>
+                    <img src="<?php echo $royal->image; ?>">
+
+
+                    <h3>
+
+                        <?php
+                        echo $royal->titolo ?>
+
+                    </h3>
+                </span>
+                <span> <?php echo $royal->categoria; ?></span>
+                <span> Prezzo: <?php echo $royal->prezzo;  ?></span>
+                <span>Peso netto: <?php echo $royal->peso; ?> </span>
+                <span>ingredienti:<?php echo $royal->ingredienti; ?> </span>
+
+            </div>
+            <div class="single-card">
+                <span>
+                    <img src="<?php echo $almocani->image; ?>">
+
+                </span>
+                <h3>
+
+                    <?php
+                    echo $almocani->titolo;
+                    ?>
+                </h3>
+                <span> <?php echo $almocani->categoria; ?></span>
+                <span> Prezzo: <?php echo $almocani->prezzo; ?></span>
+                <span>Peso netto: <?php echo $almocani->peso; ?> </span>
+                <span>ingredienti:<?php echo $almocani->ingredienti; ?> </span>
+            </div>
+            <div class="single-card">
+
+                <span>
+                    <img src="<?php echo $almogatti->image; ?>">
+
+                </span>
+                <h3>
+
+                    <?php
+                    echo $almogatti->titolo;
+                    ?>
+                </h3>
+                <span> <?php echo $almogatti->categoria; ?></span>
+                <span> Prezzo: <?php echo $almogatti->prezzo;  ?></span>
+                <span>Peso netto: <?php echo $almogatti->peso; ?> </span>
+                <span>ingredienti:<?php echo $almogatti->ingredienti; ?> </span>
+
+
+
+            </div>
+            <div class="single-card">
+                <span>
+                    <img src="<?php echo $guppipesci->image; ?>">
+
+                </span>
+                <h3>
+
+                    <?php
+                    echo $guppipesci->titolo;
+                    ?>
+                </h3>
+                <span> <?php echo $guppipesci->categoria; ?></span>
+                <span> Prezzo: <?php echo $guppipesci->prezzo;  ?></span>
+                <span>Peso netto: <?php echo $guppipesci->peso; ?> </span>
+                <span>ingredienti:<?php echo $guppipesci->ingredienti; ?> </span>
+
+
+
+            </div>
+            <div class="single-card">
+
+                <span>
+                    <img src="<?php echo $volierawilma->image; ?>">
+
+                </span>
+                <h3>
+
+                    <?php
+                    echo $volierawilma->titolo;
+                    ?>
+                </h3>
+                <span> <?php echo $guppipesci->categoria; ?></span>
+                <span> Prezzo: <?php echo $volierawilma->prezzo;  ?></span>
+                <span>Peso netto: <?php echo $volierawilma->materiale; ?> </span>
+                <span>ingredienti:<?php echo $volierawilma->dimensioni; ?> </span>
+
+            </div>
+            <div class="single-card">
+
+                <span>
+                    <img src="<?php echo $cartucceEasy->image; ?>">
+
+                </span>
+                <h3>
+
+                    <?php
+                    echo $cartucceEasy->titolo;
+                    ?>
+                </h3>
+                <span> <?php echo $cartucceEasy->categoria; ?></span>
+                <span> Prezzo: <?php echo $cartucceEasy->prezzo;  ?></span>
+                <span>Peso netto: <?php echo $cartucceEasy->materiale; ?> </span>
+                <span>ingredienti:<?php echo $cartucceEasy->dimensioni; ?> </span>
+
+
+
+
+            </div>
+            <div class="single-card">
+
+
+                <span>
+                    <img src="<?php echo $volierawilma->image; ?>">
+
+                </span>
+                <h3>
+
+                    <?php
+                    echo $volierawilma->titolo;
+                    ?>
+                </h3>
+                <span> <?php echo $guppipesci->categoria; ?></span>
+                <span> Prezzo: <?php echo $volierawilma->prezzo;  ?></span>
+                <span>Peso netto: <?php echo $volierawilma->materiale; ?> </span>
+                <span>ingredienti:<?php echo $volierawilma->dimensioni; ?> </span>
+
+            </div>
+            <div class="single-card">
+
+                <span>
+                    <img src="<?php echo $kong->image; ?>">
+
+                </span>
+                <h3>
+
+                    <?php
+                    echo $kong->titolo;
+                    ?>
+                </h3>
+                <span> <?php echo $kong->categoria; ?></span>
+                <span> Prezzo: <?php echo $kong->prezzo;  ?></span>
+                <span>Peso netto: <?php echo $kong->caratteristiche; ?> </span>
+                <span>ingredienti:<?php echo $kong->dimensioni; ?> </span>
+
+
+
+            </div>
+
+
+            <div class="single-card">
+
+                <span>
+                    <img src="<?php echo $topinitixie->image; ?>">
+
+                </span>
+                <h3>
+
+                    <?php
+                    echo $topinitixie->titolo;
+                    ?>
+                </h3>
+                <span> <?php echo $topinitixie->categoria; ?></span>
+                <span> Prezzo: <?php echo $topinitixie->prezzo;  ?></span>
+                <span>Peso netto: <?php echo $topinitixie->caratteristiche; ?> </span>
+                <span>ingredienti:<?php echo $topinitixie->dimensioni; ?> </span>
+
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+</body>
+
+</html>
